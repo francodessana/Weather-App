@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    background-image: url(../img/climaallin1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    backdrop-filter: blur(3.1px);
+        -webkit-backdrop-filter: blur(3.1px);
+    .titulo{
+        color: rgba(55, 4, 89, 0.997);
+        margin: 15px;
+        font-size: 2rem;
+    }
+    .buscador{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        #buscar{
+            margin: 5px;
+            padding: 5px;
+            font-weight: bold;
+            background-color: rgba(149, 46, 217, 0.997);
+        }
+        #buscar:hover{
+            cursor: pointer;
+            background-color: rgba(55, 4, 89, 0.997);
+            color: white;
+        }
+        #label{
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        #ciudad{
+            margin: 5px;
+            padding: 5px;
+            background-color: rgb(53, 9, 114);
+            color: white;
+        }
+    }
+    #container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 16rem;
+        width: 16rem;
+        padding: 10px;
+        margin: 15px;
+        border: 2px solid black;
+        border-radius: 5%;
+        /* From https://css.glass */
+        background: rgba(252, 251, 250, 0.5);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.2px);
+        -webkit-backdrop-filter: blur(1.2px);
+        border: 1px solid rgba(46, 45, 45, 0.3);
+        #pronostico{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            #infoClima{
+                margin: 5px;
+                padding: 5px;
+            }
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .fa{
+            color: black
+        }
+    }
+}
+
