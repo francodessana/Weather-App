@@ -14,25 +14,33 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    padding: 10px;
     backdrop-filter: blur(3.1px);
         -webkit-backdrop-filter: blur(3.1px);
+    overflow: hidden;
+    header{
+        width: 100%;
+        height: auto;
+        background-color: rgba(252, 251, 250, 0.5);
+        padding: 20px;
+    }
     .titulo{
-        color: rgba(55, 4, 89, 0.997);
-        margin: 15px;
+        color: black;
         font-size: 2rem;
+        text-align: center;
     }
     .buscador{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 1rem;
         #buscar{
-            margin: 5px;
+            margin-top: 5px;
             padding: 5px;
             font-weight: bold;
+            font-family: 'Space Grotesk', sans-serif;
             background-color: rgba(149, 46, 217, 0.997);
         }
         #buscar:hover{
@@ -47,8 +55,15 @@ body{
         #ciudad{
             margin: 5px;
             padding: 5px;
-            background-color: rgb(53, 9, 114);
-            color: white;
+            background-color: rgba(252, 251, 250, 0.5);
+            //background-color: rgb(53, 9, 114);
+            color: rgba(55, 4, 89, 0.997);
+            font-weight: bold;
+            border-radius: 5%;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        #ciudad:hover{
+            cursor: pointer;
         }
     }
     #container{
@@ -56,14 +71,18 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 16rem;
-        width: 16rem;
+        height: 17.2rem;
+        width: 17.2rem;
         padding: 10px;
-        margin: 15px;
+        margin: 2.3rem;
         border: 2px solid black;
         border-radius: 5%;
+        transition: all 1s ease-in-out;
+
         /* From https://css.glass */
-        background: rgba(252, 251, 250, 0.5);
+       // background: rgba(252, 251, 250, 0.5);
+        background-image: url(../img/climaallin1.jpeg);
+        background-size: cover;
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(1.2px);
@@ -74,17 +93,37 @@ body{
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            padding: auto;
+            margin: auto;
+            backdrop-filter: blur(1.2px);
+            -webkit-backdrop-filter: blur(1.2px);
+            border-radius: 15%;
             #infoClima{
-                margin: 5px;
+                margin: auto;
                 padding: 5px;
+                font-weight: bolder;
+                text-align: center;
             }
+            
         }
+    }
+    #container:hover{
+        cursor: pointer;
+        scale: 1.2;
+    }
+    #container::leave{
+        scale: 1;
     }
     footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 10px;
+        height: 9rem;
+        width: 100%;
+        font-weight: bold;
+        background-color: rgba(252, 251, 250, 0.5);
         .fa{
             color: black
         }

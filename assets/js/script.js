@@ -8,7 +8,6 @@ async function datosClima(){
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=118f4ff6780b41fdbc825555230909&q=${ciudad.value}`);
         const data = await response.json();
         console.log(data);
-
         function mostrarPronostico(){
             pronostico.innerHTML = `
             <img id="icon" src="${data.current.condition.icon}" alt="${data.current.condition.text}">
@@ -19,18 +18,15 @@ async function datosClima(){
                 <p>${data.current.temp_c} °C</p>
                 <p>Hum ${data.current.humidity}%</p>
                 <p>Feelslike ${data.current.feelslike_c} °C</p>
-                <p>Wind ${data.current.wind_kph} km/h</p>
             </div>
             `
         }
         mostrarPronostico();
-        
     } catch (error) {
-        console.log("error al buscar datos de la ciudad");
+        pronostico.innerHTML =`ERROR`
     }
 }
 buscar.addEventListener('click', datosClima);
-
 ciudad.addEventListener('keydown', (event) =>{ 
     //funcion para buscar presionando la tecla ENTER
     if(event.key === 'Enter'){
